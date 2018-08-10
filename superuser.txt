@@ -1,0 +1,3 @@
+username = cheaptrip
+email = test@cheaptrip.com
+password = noisynoise22

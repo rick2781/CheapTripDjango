@@ -24,8 +24,10 @@ from api import views
 
 router = routers.DefaultRouter()
 router.register(r'flights', views.FlightViewSet)
+router.register(r'users', views.UserViewSet)
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^', include(router.urls))
+    url(r'^', include(router.urls)),
+    url(r'^authentication/', include('rest_framework.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
